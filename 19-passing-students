@@ -1,0 +1,10 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    List<Boolean> examList = new List<Boolean>{passedExam,passedAssignments,passedProject};
+    Integer passCount = 0;    
+    system.debug(examList);
+    for(Boolean examResult : examList){
+    	if(examResult)
+           passCount++;
+    }
+    return (passCount >= 2);
+}
