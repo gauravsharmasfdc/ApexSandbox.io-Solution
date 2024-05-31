@@ -7,9 +7,5 @@ public Boolean companionPlants(String plant1, String plant2) {
         'tomatoes' => new Set<String>{'onions'}
     };
 
-    if(companions.containsKey(plant1)){
-        return companions.get(plant1).contains(plant2);
-    } else{
-        return false;
-    }
+    return companions.containsKey(plant1) && companions.get(plant1).contains(plant2);
 }
