@@ -1,13 +1,15 @@
 public Boolean companionPlants(String plant1, String plant2) {
-    Map<String, Set<String>> companions = new Map<String, Set<Sting>>{
+    Map<String, Set<String>> companions = new Map<String, Set<String>>{
         'lettuce' => new Set<String>{'cucumbers','onions'},
         'onions' => new Set<String>{'lettuce','carrots','tomatoes'},
         'cucumbers' => new Set<String>{'lettuce'},
         'carrots' => new Set<String>{'onions'},
-        'tomatoes' => new Set<String>{'onions'},
-    }
+        'tomatoes' => new Set<String>{'onions'}
+    };
 
     if(companions.containsKey(plant1) || companions.containsKey(plant2) ){
         return companions.get(plant1).contains(plant2);
+    } else{
+        return false;
     }
 }
