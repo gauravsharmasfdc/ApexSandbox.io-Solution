@@ -1,0 +1,9 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+    Integer largestNumber = num1;
+    Set<Integer> numbers = new Set<Integer>{num1,num2,num3};
+    for(Integer num : numbers){
+        if(largestNumber < num)
+            largestNumber = num;
+    }
+    return largestNumber;
+}
