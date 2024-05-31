@@ -1,0 +1,13 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    Map<String,String> whoBeatByWhom = new Map<String,String>();
+    whoBeatByWhom.put('scissors','rock');
+    whoBeatByWhom.put('paper','scissors');
+    whoBeatByWhom.put('rock','paper');
+
+    if(player1 == player2)
+        return 0;
+    else if(whoBeatByWhom.get(player1) == player2)
+        return 2;
+    else
+        return 1;
+}
