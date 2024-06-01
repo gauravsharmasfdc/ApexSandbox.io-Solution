@@ -1,0 +1,24 @@
+public Integer nextPrime(Integer num) {
+    
+    Integer primeNum = num+1;
+    boolean primeFound = false;
+    while(!primeFound){
+        if (num <= 1) {
+            primeFound = false;
+        } else if(num == 2)
+            primeFound = true;
+        else if (num % 2 == 0) {
+            primeFound = false; 
+        } else {
+            for (Integer i = 3; i <= Math.sqrt(num); i += 2) {
+                if (num % i == 0) {
+                    primeFound = false; 
+                }
+            }
+        }
+    }
+
+    return primeNum;
+
+
+}
