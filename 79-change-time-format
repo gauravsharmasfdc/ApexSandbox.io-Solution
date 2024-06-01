@@ -6,11 +6,7 @@ public String changeTimeFormat(String strTime) {
     if(hours > 12){
         period = 'PM';
         hours = hours - 12 ;
-        if(hours<10)
-            hoursStr = '0'+String.valueOf(hours);
-        else
-            hoursStr = String.valueOf(hours);
-       
+        hoursStr = (hours <10) ? '0'+String.valueOf(hours) : String.valueOf(hours);
     } else if (hours == 0){
         hoursStr = String.valueOf(hours+12);
     } else if (hours == 12){
