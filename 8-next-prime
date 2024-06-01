@@ -16,6 +16,7 @@ public Integer nextPrime(Integer num) {
                 }
             }
         }
+        primeNum++;
     }
 
     return primeNum;
