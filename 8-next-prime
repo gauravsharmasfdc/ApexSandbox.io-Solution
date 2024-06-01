@@ -3,15 +3,15 @@ public Integer nextPrime(Integer num) {
     Integer primeNum = num+1;
     boolean primeFound = false;
     while(!primeFound){
-        if (num <= 1) {
+        if (primeNum <= 1) {
             primeFound = false;
-        } else if(num == 2)
+        } else if(primeNum == 2)
             primeFound = true;
-        else if (num % 2 == 0) {
+        else if (primeNum % 2 == 0) {
             primeFound = false; 
         } else {
-            for (Integer i = 3; i <= Math.sqrt(num); i += 2) {
-                if (num % i == 0) {
+            for (Integer i = 3; i <= Math.sqrt(primeNum); i += 2) {
+                if (primeNum % i == 0) {
                     primeFound = false; 
                 }
             }
