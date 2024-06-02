@@ -1,0 +1,17 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    try {
+        apxio__Course__c course = new apxio__Course__c(
+            Name = name,
+            apxio__Course_Details__c = details,
+            apxio__Credits__c = String.valueOf(credits)
+        );
+        insert course;
+    return course.Id;
+    } catch (DmlException ex) {
+        // Check if the exception is due to an invalid or null value for a restricted picklist
+        if (ex.getDmlType(0) == StatusCode.INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST) {
+            return null;
+        }
+        throw ex; // Re-throw the exception if it is a different error
+    }
+}
