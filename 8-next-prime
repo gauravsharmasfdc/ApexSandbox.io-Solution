@@ -7,12 +7,12 @@ public Integer nextPrime(Integer num) {
                 primeFound = false;
             } else if (primeNum == 2) {
                 primeFound = true;
-            } else if (primeNum % 2 == 0) {
+            } else if (Math.mod(primeNum,2) == 0) {
                 primeFound = false;
             } else {
                 primeFound = true;
                 for (Integer i = 3; i <= Math.sqrt(primeNum); i += 2) {
-                    if (primeNum % i == 0) {
+                    if (Math.mod(primeNum,i) == 0) {
                         primeFound = false;
                         break;
                     }
@@ -20,7 +20,7 @@ public Integer nextPrime(Integer num) {
             }
 
             if (!primeFound) {
-                primeNum++; // Only increment if the current number is not prime
+                primeNum++; 
             }
         }
 
