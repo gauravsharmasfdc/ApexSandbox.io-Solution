@@ -1,20 +1,22 @@
 public void createCourseAndClass(String name, String description) {
-    createCourse(name,description);
-    createClass(name,description);
+    apxio__Course__c course = createCourse(name,description);
+    createClass(name,description, course);
 }
 
-public void createCourse(String name, String description) {
+public apxio__Course__c createCourse(String name, String description) {
     apxio__Course__c  course = new apxio__Course__c();
     course.Name = name;
     if(String.isNotBlank(description))
         course.apxio__Course_Details__c = description;
 
     Insert course;
+    return course;
 }
 
-public void createClass(String name, String description) {
-    apxio__Class__c class  = new apxio__Class__c();
-    class.Name = name;
-    class.apxio__Description__c = description.left(255);
-    insert class;
+public void createClass(String name, String description, apxio__Course__c course) {
+    apxio__Class__c classRecord  = new apxio__Class__c();
+    classRecord.Name = name;
+    classRecord.apxio__Description__c = description.left(255);
+    classRecord.apxio__Course__c = course.Id;
+    insert classRecord;
 }
