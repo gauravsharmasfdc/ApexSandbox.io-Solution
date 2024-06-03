@@ -16,7 +16,8 @@ public apxio__Course__c createCourse(String name, String description) {
 public void createClass(String name, String description, apxio__Course__c course) {
     apxio__Class__c classRecord  = new apxio__Class__c();
     classRecord.Name = name;
-    classRecord.apxio__Description__c = description.left(255);
+    if(String.isNotBlank(description))
+        classRecord.apxio__Description__c = description.left(255);
     classRecord.apxio__Course__c = course.Id;
     insert classRecord;
 }
