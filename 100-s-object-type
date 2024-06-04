@@ -1,0 +1,4 @@
+public Boolean isTypeAccount(sObject record)
+{
+    return (record.getSObjectType() == Schema.Account.getSObjectType())
+}
