@@ -1,0 +1,15 @@
+public Id classFromCourse(String courseName) {
+    if(String.isBlank(courseName))
+        return null;
+    
+    List<apxio__Course__c> courses = [Select Id, Name From apxio__Course__c WHERE Name =: courseName LIMIT 1 ];
+    if(courses.isEmpty())
+        return null;
+    
+    apxio__Class__c classRecord = new apxio__Class__c();
+    classRecord.Name = course.Name;
+    classRecord.apxio__Course__c = course.Id;
+
+    Insert classRecord;
+    return classRecord.Id;
+}
