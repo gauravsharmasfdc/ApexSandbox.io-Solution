@@ -1,5 +1,5 @@
 public Boolean isTypeAccount(sObject record)
 {
-    (record == null) return false;
+    if(record == null) return false;
     return (record.getSObjectType() == Schema.Account.getSObjectType());
 }
