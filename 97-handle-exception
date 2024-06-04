@@ -1,10 +1,10 @@
 public String divide(Integer a, Integer b){
-    if(a == null || b == null) return null;
-    
     try{
         Decimal result = a/b;
         return String.valueOf(result.abs());
     } catch(MathException ex){
+        return ex.getMessage();
+    } catch( Exception ex){
         return ex.getMessage();
     }
     
