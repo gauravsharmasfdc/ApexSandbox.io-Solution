@@ -1,0 +1,18 @@
+public void enrollStudents(List<String> emails, String className) {
+    list<apxio__Class_Enrollment__c> classEnrollments = new list<apxio__Class_Enrollment__c>();
+    if(emails.isEmpty() || String.isBlank(className))
+        return null 
+    
+    list<apxio__Class__c> classes = [SELECT Id FROM apxio__Class__c WHERE Name =: className LIMIT 1];
+    For(apxio__Student__c student = [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c IN : emails]){
+        apxio__Class_Enrollment__c classEnrollment = new apxio__Class_Enrollment__c();
+        classEnrollment.apxio__Student__c = student.Id;
+        classEnrollment.apxio__Offered_Class__c = classes[0].Id;
+
+        classEnrollments.add(classEnrollment);
+    }
+
+    if(!classEnrollments.isEmpty()){
+        Insert classEnrollments;
+    }
+}
