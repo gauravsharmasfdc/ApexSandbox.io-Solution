@@ -7,8 +7,8 @@ public Id classFromCourse(String courseName) {
         return null;
     
     apxio__Class__c classRecord = new apxio__Class__c();
-    classRecord.Name = course.Name;
-    classRecord.apxio__Course__c = course.Id;
+    classRecord.Name = courses[0].Name;
+    classRecord.apxio__Course__c = courses[0].Id;
 
     Insert classRecord;
     return classRecord.Id;
