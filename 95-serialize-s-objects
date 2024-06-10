@@ -1,0 +1,6 @@
+public String getAccountsInJSONFormat(List<Account> accounts){
+  if(accounts.isEmpty()) return null;
+
+  return JSON.serialize(accounts);
+    
+}
