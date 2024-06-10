@@ -1,0 +1,6 @@
+public List<Account> getAccountsFromJSONString(String inputJSON){
+    (String.isBlank(inputJSON)) return null;
+
+    return (List<Account>)JSON.deserialize(inputJSON);
+
+}
