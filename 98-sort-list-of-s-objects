@@ -1,4 +1,6 @@
 public List<Account> getAccounts(List<Account> accounts) {
+    if(accounts.isEmpty()) return accounts;
+
     list<AccountWrapper> accountWrapperList = new List<AccountWrapper>();
     List<Account> accountList = new list<Account>();
     for(Account acc : accounts) {
