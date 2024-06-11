@@ -1,0 +1,47 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    list<AccountWrapper> accountWrapperList = new List<AccountWrapper>();
+    List<Account> accountList = new list<Account>();
+    for(Account acc : accounts) {
+        accountWrapperList.add( new AccountWrapper(acc));
+    }
+
+    accountWrapperList.sort();
+
+    for(AccountWrapper aw : accountWrapperList){
+        accountList.add(aw.accountRecord);
+    }
+
+    return accountList;
+}
+Class AccountWrapper implements Comparable {
+
+    Account accountRecord;
+
+    AccountWrapper( Account acc) {
+        accountRecord = acc;
+    }
+
+    public Integer CompareTo (Object CompareTo) {
+        Integer returnValue = 0;
+        AccountWrapper compareToAccount = (AccountWrapper)CompareTo;
+
+        if ((accountRecord.AnnualRevenue == null) && (compareToAccount.accountRecord.AnnualRevenue == null)) {
+            // both wrappers have null Amounts
+            returnValue = 0;
+        } else if ((accountRecord.AnnualRevenue == null) && (compareToAccount.accountRecord.AnnualRevenue != null)){
+            // nulls-first implementation
+            returnValue = -1;
+        } else if ((accountRecord.AnnualRevenue != null) && (compareToAccount.accountRecord.AnnualRevenue == null)){
+            // nulls-first implementation
+            returnValue = 1;
+        } else if (accountRecord.AnnualRevenue > compareToAccount.accountRecord.AnnualRevenue) {
+            // Set return value to a positive value.
+            returnValue = 1;
+        } else if (accountRecord.AnnualRevenue < compareToAccount.accountRecord.AnnualRevenue) {
+            // Set return value to a negative value.
+            returnValue = -1;
+        } 
+        return returnValue;
+
+    }
+}
