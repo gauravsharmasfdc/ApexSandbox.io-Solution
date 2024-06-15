@@ -1,11 +1,13 @@
 public void linkParent(Case c1, Case c2) {
-    ((String.isBlank(c1.ContactId) || String.isBlank(c2.ContactId)) return;
-
-    (c1.ContactId != c2.ContactId) return;
-
-    if(c1.CreatedDate < c2.CreatedDate) 
-        c2.parentId = c1.Id;
-    else
-        c1.parentId = c2.id;
-
+    public void linkParent(Case c1, Case c2) {
+        if(String.isNotBlank(c1.ContactId) && String.isNotBlank(c2.ContactId)){
+            if(c1.ContactId == c2.ContactId){
+                if(c1.CreatedDate < c2.CreatedDate) 
+                    c2.parentId = c1.Id;
+                else
+                    c1.parentId = c2.Id;
+            }
+        }
+        
+    }
 }
