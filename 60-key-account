@@ -8,5 +8,5 @@ public Boolean isKeyAccount(Account a) {
     return (
             (industryToRevenue.containsKey(a.Industry) && a.AnnualRevenue >= industryToRevenue.get(a.Industry)) ||
             (!industryToRevenue.containsKey(a.Industry) && a.AnnualRevenue >= 500000)
-        )
+        );
 }
