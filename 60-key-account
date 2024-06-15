@@ -6,10 +6,7 @@ public Boolean isKeyAccount(Account a) {
         'Retail' => 2000000
     };
 
+     Decimal revenueThreshold = INDUSTRY_REVENUE_THRESHOLDS.containsKey(a.Industry)  ? INDUSTRY_REVENUE_THRESHOLDS.get(a.Industry) : DEFAULT_REVENUE_THRESHOLD;
 
-
-    return (
-            (INDUSTRY_REVENUE_THRESHOLDS.containsKey(a.Industry) && a.AnnualRevenue >= INDUSTRY_REVENUE_THRESHOLDS.get(a.Industry)) ||
-            (!INDUSTRY_REVENUE_THRESHOLDS.containsKey(a.Industry) && a.AnnualRevenue >= DEFAULT_REVENUE_THRESHOLD)
-        );
+    return a.Industry >= revenueThreshold;
 }
