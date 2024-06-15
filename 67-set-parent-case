@@ -8,6 +8,5 @@ public void linkParent(Case c1, Case c2) {
                     c1.parentId = c2.Id;
             }
         }
-        
     }
 }
