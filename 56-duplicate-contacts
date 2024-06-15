@@ -1,8 +1,6 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
-    if (String.isNotBlank(c1.Email)  && String.isNotBlank(c2.Email) && c1.Email == c2.Email) return true;
-
-    else if (String.isNotBlank(c1.Phone)  && String.isNotBlank(c2.Phone) && c1.Phone == c2.Phone) return true;
-
-    else return false;
-
+return  (
+            (String.isNotBlank(c1.Email)  && String.isNotBlank(c2.Email) && c1.Email == c2.Email) ||
+            (String.isNotBlank(c1.Phone)  && String.isNotBlank(c2.Phone) && c1.Phone == c2.Phone)
+        );
 }
