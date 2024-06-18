@@ -1,7 +1,7 @@
 public static Integer findLast(List<Integer> nums, Integer target) {
         if(nums == null || nums.isEmpty()) return -1;
         Integer index = nums.indexOf(target);
-     	index = getLastIndex(nums,target,index,index);
+     	if(index != -1) index = getLastIndex(nums,target,index,index);
         return index;
     }
     
