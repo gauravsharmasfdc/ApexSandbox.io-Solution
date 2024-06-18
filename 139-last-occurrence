@@ -1,16 +1,19 @@
 public static Integer findLast(List<Integer> nums, Integer target) {
         if(nums == null || nums.isEmpty()) return -1;
-        Integer index = nums.indexOf(target);
-        index = getLastIndex(nums,target,index);
+        Integer index = getLastIndex(nums,target,-1);
         return index;
     }
     
     
-    public static Integer getLastIndex(List<Integer> nums, Integer target, Integer finalIndex) {
-        nums.remove(finalIndex-1);
-        Integer currentIndex = nums.indexOf(target);
-        if(currentIndex != -1)
-        finalIndex = getLastIndex(nums,target, currentIndex++);
-        return finalIndex;
+    public static Integer getLastIndex(List<Integer> nums, Integer target, Integer currentIndex) {
+        Integer index = nums.indexOf(target);
+        if(index != -1){
+            nums.remove(index);
+            index = getLastIndex(nums,target, index++);
+        }else{
+            index = currentIndex;
+        }
+        
+        return index;
         
     }
