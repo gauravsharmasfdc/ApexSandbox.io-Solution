@@ -1,0 +1,17 @@
+public static Integer findLast(List<Integer> nums, Integer target) {
+    if(nums == null || nums.isEmpty()) return -1;
+    Integer index = nums.indexOf(target);
+    index = getLastIndex(nums,target,index);
+    return index;
+}
+
+
+public static Integer getLastIndex(List<Integer nums, Integer target, Integer finalIndex) {
+    nums = nums.remove(index);
+    Integer currentIndex = nums.indexOf(target);
+    if(currentIndex != -1)
+        getLastIndex(nums,target, currentIndex++);
+    else
+        return finalIndex;
+    
+}
