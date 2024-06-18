@@ -7,7 +7,7 @@ public static Integer findLast(List<Integer> nums, Integer target) {
     
     
     public static Integer getLastIndex(List<Integer> nums, Integer target, Integer finalIndex) {
-        nums.remove(finalIndex);
+        nums.remove(finalIndex-1);
         Integer currentIndex = nums.indexOf(target);
         if(currentIndex != -1)
         finalIndex = getLastIndex(nums,target, currentIndex++);
