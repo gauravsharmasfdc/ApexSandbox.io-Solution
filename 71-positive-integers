@@ -3,7 +3,7 @@ public List<Integer> positiveIntegers(List<Integer> numbers) {
     if(numbers == null || numbers.isEmpty()) return postiveNumber;
 
     Integer SIZE = numbers.size();
-    for(Integer i = 0 ; i<= SIZE; i++){
+    for(Integer i = 0 ; i< SIZE; i++){
         if(numbers[i]>0){
             postiveNumber.add(numbers[i]);
         }
