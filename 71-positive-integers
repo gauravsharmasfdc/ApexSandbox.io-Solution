@@ -1,16 +1,13 @@
 public List<Integer> positiveIntegers(List<Integer> numbers) {
-    List<Integer> nonPositiveNumbers = new List<Integer>();
-    if(numbers == null || numbers.isEmpty()) return nonPositiveNumbers;
+    List<Integer> postiveNumber = new List<Integer>();
+    if(numbers == null || numbers.isEmpty()) return postiveNumber;
 
-    numbers.sort();
     Integer SIZE = numbers.size();
     for(Integer i = 0 ; i<= SIZE; i++){
-        if(numbers[i]<=0){
-            nonPositiveNumbers.add(numbers[i]);
-        }else{
-            break;
+        if(numbers[i]>0){
+            postiveNumber.add(numbers[i]);
         }
     }
 
-    return nonPositiveNumbers;
+    return postiveNumber;
 }
