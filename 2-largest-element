@@ -1,0 +1,7 @@
+public static Integer findLargest(List<Integer> nums) {
+
+    if(nums == null || nums.isEmpty()) return null;
+	nums.sort();
+    Integer size = nums.size();
+    return nums[size-1];
+}
