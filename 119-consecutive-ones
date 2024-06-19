@@ -1,20 +1,15 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
-        Integer prevConCount = 0 ;
-        Integer nextConCount = 0 ;
-        Integer maxConCount = 0;
+        Integer currentCount=0 ;
+        Integer maxCount=0;
         
-        for(Integer i = 0; i<numbers.size(); i++){
-            Integer currentNumber = numbers[i];
-            
-            Integer previousNumber = (i!=0)? numbers[i-1] : 0 ;
-            if(currentNumber == 1){
-                nextConCount++;
-            } else if(currentNumber == 0 && previousNumber == 1){
-                prevConCount = nextConCount;
-                nextConCount = 0;
+        for(Integer num : numbers){
+            if(num == 1){
+                currentCount++;
+            }else {
+                maxCount = Math.max(maxCount,currentCount);
+                currentCount= 0;
             }
         }
         
-        maxConCount = (nextConCount > = prevConCount) ?  nextConCount :  prevConCount;
-        return maxConCount;
+        return maxCount;
     }
