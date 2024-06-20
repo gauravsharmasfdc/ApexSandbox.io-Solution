@@ -7,6 +7,6 @@ public Decimal average(List<Decimal> numbers){
     }
 
     if(sum == 0) return null;
-    return sum.devide(size,2);
+    return sum.divide(size,2);
     
 }
