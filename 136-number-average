@@ -1,0 +1,12 @@
+public Decimal average(List<Decimal> numbers){
+    if(numbers == null || numbers.isEmpty()) return null;
+    Integer size = numbers.size();
+    Decimal sum = 0;
+    for(Decimal num : numbers){
+        sum += num;
+    }
+
+    if(sum == 0) return null;
+    return sum.devide(size,2);
+    
+}
