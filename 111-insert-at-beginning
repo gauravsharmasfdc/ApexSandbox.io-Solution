@@ -1,0 +1,7 @@
+public void insertAtStart(String cityName, List<String> cities) {
+    
+    if(String.isNotBlank(cityName)) {
+        cities.add(cityName,0);
+    }
+    
+}
