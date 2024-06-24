@@ -1,0 +1,26 @@
+public Boolean companionPlants(List<String> plants) {
+    final Map<String,Set<String>> companionsPlants = new Map<String,Set<String>>{
+        'lettuce'=> new Set<String>{'cucumbers','onions'},
+        'cucumbers'=>new Set<String>{'lettuce'},
+        'onions'=>new Set<String>{'lettuce','carrots','tomatoes'},
+        'carrots'=>new Set<String>{'onions'},
+        'tomatoes'=>new Set<String>{'onions'}
+    };
+    if(plants == null || plants.isEmpty()) return false;
+    Integer size = plants.size();
+    Boolean isCompanion = true;
+    for(Integer index = 0; index < size; index++){
+        Set<String> campPlants = companionsPlants.containsKey(plants[index]) ? companionsPlants.get(plants[index]) : new Set<String>();
+        if(index == 0){
+            if(!campPlants.contains(plants[index+1])) isCompanion = false;
+        } else if( index == size-1){
+            if(!campPlants.contains(plants[index-1])) isCompanion = false;
+        } else{
+            if(!campPlants.contains(plants[index+1]) ||!!campPlants.contains(plants[index-1])) isCompanion = false;
+        }
+
+        if(!isCompanion) break;
+    }
+
+    return isCompanion;
+}
