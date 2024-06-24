@@ -8,9 +8,9 @@ public Boolean companionPlants(List<String> plants) {
         'tomatoes'=>new Set<String>{'onions'}
     };
     if(plants == null || plants.isEmpty()) return isCompanion;
-    if(plants.size == 1) return !isCompanion;
-    Integer size = plants.size();
     
+    Integer size = plants.size();
+    if(size == 1) return !isCompanion;
     for(Integer index = 0; index < size; index++){
         Set<String> campPlants = companionsPlants.containsKey(plants[index]) ? companionsPlants.get(plants[index]) : new Set<String>();
         if(index == 0){
