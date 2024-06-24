@@ -1,0 +1,13 @@
+public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
+
+    if(firstNames == null || firstNames.isEmpty() || lastNames == null || lastNames.isEmpty()) return new List<String>();
+
+    List<String> fullNamesList = new List<String>();
+    Integer size = firstNames.size();
+
+    for(Integer index = 0; index< size; index++){
+        fullNamesList.add(String.format('{0} {1}', new List<String>{firstNames[index], lastNames[index]}));
+    }
+
+    return fullNamesList;
+}
