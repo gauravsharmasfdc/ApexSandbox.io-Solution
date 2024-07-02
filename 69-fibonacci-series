@@ -3,10 +3,10 @@ public List<Integer> fibonacciSeries(Integer n) {
 
     for(Integer i = 1; i <= n; i++){
         if(i == 1 || i == 2)
-            fibonacciSeries.add(1);
+            fibSeries.add(1);
         else
-            fibonacciSeries.add(fibonacciSeries[i-2] + fibonacciSeries[i-1]);
+            fibSeries.add(fibSeries[i-2] + fibSeries[i-1]);
     }
 
-    return fibonacciSeries;
+    return fibSeries;
 }
