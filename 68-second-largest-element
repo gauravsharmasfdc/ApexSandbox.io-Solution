@@ -3,7 +3,7 @@ public Integer secondLargest(List<Integer> numbers) {
     Integer secLargest = 0;
 
 
-    for(Integer num = numbers){
+    for(Integer num : numbers){
         if(num > largest){
             secLargest = largest;
             largest = num;
