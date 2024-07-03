@@ -2,6 +2,9 @@ public Integer secondLargest(List<Integer> numbers) {
     Integer largest = 0;
     Integer secLargest = 0;
 
+    numbers.sort();
+    Integer largest = numbers[0];
+    Integer secLargest = numbers[0];
 
     for(Integer num : numbers){
         if(num > largest){
