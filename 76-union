@@ -1,11 +1,7 @@
 public Set<Integer> setUnion(Set<Integer> set1, Set<Integer> set2) {
     Set<Integer> unionItems = new Set<Integer>();
-
-
     if(!set1.isEmpty()) unionItems.addAll(set1);
     if(!set2.isEmpty()) unionItems.addAll(set2);
-
-    
 
     return unionItems;
 }
