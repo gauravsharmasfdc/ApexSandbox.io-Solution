@@ -9,4 +9,5 @@ public Integer secondLargest(List<Integer> numbers) {
             largest = num;
         }
     }
+    return secLargest;
 }
