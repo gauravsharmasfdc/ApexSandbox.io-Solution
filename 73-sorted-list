@@ -1,6 +1,6 @@
 public boolean isSorted(List<Integer> numbers) {
     boolean isSortedList = false;
-    Boolean sortOrder = null ;
+    String sortOrder = null ;
     Integer size = numbers.size();
     if(size < 3) return true;
 
