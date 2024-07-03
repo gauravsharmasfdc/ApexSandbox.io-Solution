@@ -22,5 +22,5 @@ public boolean isSorted(List<Integer> numbers) {
         }
     }
 
-    return isSortedList
+    return isSortedList;
 }
