@@ -5,8 +5,10 @@ public boolean isSorted(List<Integer> numbers) {
     if(size < 3) return true;
 
     for(Integer i = 0; i < size-1; i++) {
-        if(numbers[i] == numbers[i+1])
+        if(numbers[i] == numbers[i+1]){
+            isSortedList = true;
             continue;
+        }
 
         if(String.isBlank(sortOrder)){
             if(numbers[i] > numbers[i+1]){
