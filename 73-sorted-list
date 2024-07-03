@@ -1,34 +1,18 @@
 public boolean isSorted(List<Integer> numbers) {
-    boolean isSortedList = false;
-    String sortOrder = null ;
+    boolean ascending = true;
+    boolean descending = true;
     Integer size = numbers.size();
     if(size < 3) return true;
 
     for(Integer i = 0; i < size-1; i++) {
-        if(numbers[i] == numbers[i+1]){
-            isSortedList = true;
-            continue;
-        }
+        if(numbers[i] < numbers[i+1])
+            descending = false;
+        else if(numbers[i] > numbers[i+1])
+            ascending = false;
+        
 
-        if(String.isBlank(sortOrder)){
-            if(numbers[i] > numbers[i+1]){
-                sortOrder = 'DESC';
-            } else if(numbers[i] < numbers[i+1]){
-                sortOrder = 'ASC';
-            }
-        }
-
-        if(sortOrder == 'ASC' && numbers[i] < numbers[i+1]){
-            isSortedList = true;
-            continue;
-        } else if(sortOrder == 'DESC' && numbers[i] > numbers[i+1]) {
-            isSortedList = true;
-            continue;
-        }
-        isSortedList = false;
-        break;
-
+        if(!ascending && !descending) return false;
     }
 
-    return isSortedList;
+    return true;
 }
