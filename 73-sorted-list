@@ -1,0 +1,26 @@
+public boolean isSorted(List<Integer> numbers) {
+    boolean isSortedList = true;
+    String defaultSort = 'ASC';
+    Integer size = numbers.size();
+    if(size < 3) return true;
+
+    if(numbers[0] > numbers[1])
+        defaultSort = 'DESC';
+
+    
+    for(Integer i = 0; i< size -1 ; i++) {
+        if(defaultSort == 'ASC'){
+            if(numbers[i] > numbers[i+1]){
+                isSortedList = false;
+                break;
+            }
+        } else {
+            if(numbers[i] < numbers[i+1]){
+                isSortedList = false;
+                break;
+            }
+        }
+    }
+
+    return isSortedList
+}
