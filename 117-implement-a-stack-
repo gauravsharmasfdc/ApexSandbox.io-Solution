@@ -6,7 +6,7 @@ public class Stack {
     }
     
     public Object pop() {
-        if(items.isEmpty()) return;
+        if(items.isEmpty()) return null;
         return items.remove(items.size()-1);
     }
     
@@ -15,7 +15,7 @@ public class Stack {
     }
     
     public Object peek(){
-        if(items.isEmpty()) return;
+        if(items.isEmpty()) return null;
         return items[items.size()-1];
     }
     
