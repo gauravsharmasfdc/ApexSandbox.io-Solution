@@ -10,5 +10,5 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
         industrySummaryMap.public(acc.Industry,revenue);
     }
 
-    retrun industrySummaryMap;
+    return industrySummaryMap;
 }
