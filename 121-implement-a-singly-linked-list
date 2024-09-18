@@ -1,12 +1,12 @@
 public class LinkedList{
     private Node head;
     private Node tail;
-    private Integer _size;
+    private Integer size;
 
     public LinkedList(){
         this.head = null;
         this.tail = null;
-        this._size = 0;
+        this.size = 0;
     }
     
     public void addToFront(Integer value){
@@ -14,13 +14,13 @@ public class LinkedList{
         if(this.head == null){
             this.head = newNode;
             this.tail = this.head;
-            this._size++;
+            this.size++;
             return;
         }
 
         newNode.next = this.head;
         this.head = newNode;
-        this._size++;
+        this.size++;
     }
     public Integer removeFromFront(){
         if(this.head == null){
@@ -29,7 +29,7 @@ public class LinkedList{
         Node newHead = this.head.next;
         this.head.next = null;
         this.head = newHead;
-        this._size--;
+        this.size--;
 
     }
     public void addToTail(Integer value){
@@ -37,12 +37,12 @@ public class LinkedList{
         if(this.head == null){
             this.head = newNode;
             this.tail = this.head;
-            this._size++;
+            this.size++;
             return;
         }
         this.tail.next = newNode;
         this.tail = newNode;
-        this._size++;
+        this.size++;
     }
     public Integer removeFromTail(){
         if(this.head == null){
@@ -56,10 +56,10 @@ public class LinkedList{
 
         newTail.next = null;
         this.tail = newTail;
-        this._size--;
+        this.size--;
     }
     public Integer size(){
-        return this._size;
+        return this.size;
     }    
 }
 
