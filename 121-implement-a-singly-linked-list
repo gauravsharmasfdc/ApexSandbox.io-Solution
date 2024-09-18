@@ -61,7 +61,7 @@ public class LinkedList{
         removedItem = this.tail.data;
         this.tail = newTail;
         this.size--;
-        return removedItem
+        return removedItem;
     }
     public Integer size(){
         return this.size;
