@@ -2,7 +2,7 @@ public Boolean isPalindrome(String str){
     String term2;
         List<String> forwordList = new List<String>();
         List<String> reverseList = new List<String>();
-        if(String.isBlank(str)) return false;
+        if(String.isBlank(str)) return true;
         
         String term = str;
         term = term.deleteWhitespace();
