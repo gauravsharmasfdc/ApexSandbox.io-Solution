@@ -27,6 +27,13 @@ public class LinkedList{
         if(this.head == null){
             return null;
         }
+        if(this.head.next == null){
+            removedItem = this.head.data;
+            this.head = null;
+            this.size--;
+            return removedItem;
+        }
+        
         Node newHead = this.head.next;
         this.head.next = null;
         removedItem = this.head.data;
@@ -50,6 +57,13 @@ public class LinkedList{
         Integer removedItem;
         if(this.head == null){
             return null;
+        }
+
+        if(this.head.next == null){
+            removedItem = this.head.data;
+            this.head = null;
+            this.size--;
+            return removedItem;
         }
 
         Node newTail = this.head;
