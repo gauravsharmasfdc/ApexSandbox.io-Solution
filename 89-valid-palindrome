@@ -4,10 +4,8 @@ public Boolean isPalindrome(String str){
         List<String> reverseList = new List<String>();
         if(String.isBlank(str)) return true;
         
-        String term = str;
-        term = term.deleteWhitespace();
-        term = term.toLowerCase();
-        term2 = term.reverse();
+        String term = str?.deleteWhitespace()?.toLowerCase();
+        String term2  = term.reverse();
         Integer length = term.length();
         for(Integer i=0; i<length; i++){
             String term_char = term.mid(i,1);
