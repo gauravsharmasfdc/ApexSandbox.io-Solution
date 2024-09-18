@@ -1,0 +1,34 @@
+public Boolean isPalindrome(String str){
+    String term2;
+        List<String> forwordList = new List<String>();
+        List<String> reverseList = new List<String>();
+        if(String.isBlank(str)) return false;
+        
+        String term = str;
+        term = term.deleteWhitespace();
+        term = term.toLowerCase();
+        term2 = term.reverse();
+        Integer length = term.length();
+        for(Integer i=0; i<length; i++){
+            String term_char = term.mid(i,1);
+            String term2_char = term2.mid(i,1);
+            if(term_char.isAlphanumeric()){
+                forwordList.add(term_char);
+            }
+            if(term2_char.isAlphanumeric()){
+                reverseList.add(term2_char);
+            }
+        }
+        length = forwordList.size();
+        
+        for(Integer i =0 ;i<length ; i++){
+            if(forwordList[i] != reverseList[i]){
+                return false;
+            }
+        }
+        
+        
+        System.debug(forwordList);
+        System.debug(reverseList);
+        return true;
+}
