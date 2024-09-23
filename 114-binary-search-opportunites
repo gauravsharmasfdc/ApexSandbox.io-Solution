@@ -1,15 +1,19 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer start = 0;
-    Integer last = opportunities.size()-1;
-    while (start < last){
-        Integer mid = (start+last) /2;
-        if(target == opportunities[mid].amount)  return mid;
-        if(target > opportunities[mid].amount){
-            start = mid;
-        }else {
-            last = mid;
+        Integer last = opportunities.size()-1;
+        
+        if(target == opportunities[start].amount) return start;
+        if(target == opportunities[last].amount) return last;
+        while (start < last-1){
+            Integer mid = (start+last) /2;
+            System.debug('Mid Index :'+mid);
+            if(target == opportunities[mid].amount) return mid;
+            if(target > opportunities[mid].amount){
+                start = mid;
+            }else {
+                last = mid;
+            }
         }
-    }
-
+        
     return -1;
 }
