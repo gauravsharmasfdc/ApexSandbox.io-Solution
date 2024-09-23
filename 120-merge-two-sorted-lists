@@ -27,7 +27,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
             allItems.add(list2[listTwoPointer]);
             listTwoPointer++;
         }
-        count ++
+        count ++;
     }
     return allItems;
 }
