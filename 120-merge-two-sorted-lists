@@ -6,7 +6,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     Integer list2Size = list2.size();
     Integer maxSize = list1.size() > list2.size() ? list1.size() : list2.size();
     Integer count = 0;
-    while(count < maxSize){
+    while(count < maxSize-1){
         if(listOnePointer == list1Size){
             allItems.add(list2[listTwoPointer]);
             listTwoPointer++;
