@@ -11,5 +11,5 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         }
     }
 
-    return -1
+    return -1;
 }
