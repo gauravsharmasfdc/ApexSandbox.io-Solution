@@ -1,33 +1,27 @@
 public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
     list<Integer> allItems = new List<Integer>();
-    Integer listOnePointer = 0;
-    Integer listTwoPointer = 0;
-    Integer start = 0;
-    Integer totalIteration = list1.size() + list2.size();
-    while(start < totalIteration){
+        Integer listOnePointer = 0;
+        Integer listTwoPointer = 0;
         
-        if(listOnePointer == list1.size()) {
-            allItems.add(list2[listTwoPointer]);
-            listTwoPointer++;
-        }else if(listTwoPointer == list2.size()) {
+        while(listOnePointer < list1.size()  && listTwoPointer < list2.size()){
+            if(list1[listOnePointer] < list2[listTwoPointer]){
+                allItems.add(list1[listOnePointer]);
+                listOnePointer++;
+            } else {
+                allItems.add(list2[listTwoPointer]);
+                listTwoPointer++;
+            }
+        }
+        
+        while(listOnePointer < list1.size() ){
             allItems.add(list1[listOnePointer]);
             listOnePointer++;
         }
-        else if(list1[listOnePointer] < list2[listTwoPointer]){
-            allItems.add(list1[listOnePointer]);
-            listOnePointer++;
-        }
         
-        else if(list1[listOnePointer] > list2[listTwoPointer]){
+        while(listTwoPointer < list2.size() ){
             allItems.add(list2[listTwoPointer]);
             listTwoPointer++;
-        } 
-        
-        
-        start++;
-    }
-    
-    
-    System.debug('Merger list :'+ allItems);
-    return allItems;
+        }
+        System.debug('Merger list :'+ allItems);
+        return allItems;
 }
