@@ -8,23 +8,23 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     Integer count = 0;
     while(count < maxSize){
         if(listOnePointer == list1Size){
-            allItems.add(list2[listTwoPointer])
+            allItems.add(list2[listTwoPointer]);
             listTwoPointer++;
             continue;
         }
 
         if(listTwoPointer == list2Size){
-            allItems.add(list1[listOnePointer])
+            allItems.add(list1[listOnePointer]);
             listOnePointer++;
             continue;
         }
 
         if(list1[listOnePointer] < list2[listTwoPointer]){
-            allItems.add(list1[listOnePointer])
+            allItems.add(list1[listOnePointer]);
             listOnePointer++;
         }
         if(list1[listOnePointer] > list2[listTwoPointer]){
-            allItems.add(list2[listTwoPointer])
+            allItems.add(list2[listTwoPointer]);
             listTwoPointer++;
         }
         count ++
