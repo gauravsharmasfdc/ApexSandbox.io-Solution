@@ -3,8 +3,8 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer last = opportunities.size()-1;
     while (start <= last){
         Integer mid = (start+last) /2;
-        if(target == opportunities[mid])  return opportunities.indexOf(mid);
-        if(target > opportunities[mid]){
+        if(target == opportunities[mid].amount)  return opportunities.indexOf(mid);
+        if(target > opportunities[mid].amount){
             start = mid;
         }else {
             last = mid;
