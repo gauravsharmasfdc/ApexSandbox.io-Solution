@@ -4,7 +4,7 @@ public boolean isAnagram(String s1, String s2) {
     Map<Integer,Integer> s2Map = new Map<Integer,Integer>();
     Integer length = s1.length();
     for(Integer i=0; i< length; i++){
-        Integer s1charCode = s1.chatAt(i);
+        Integer s1charCode = s1.charAt(i);
         
         if(s1Map.containsKey(s1charCode)){
             Integer s1count = s1Map.get(s1charCode);
@@ -13,7 +13,7 @@ public boolean isAnagram(String s1, String s2) {
             s1Map.put(s1charCode,s1count);
 
 
-        Integer s2charCode = s2.chatAt(i);
+        Integer s2charCode = s2.charAt(i);
         if(s2Map.containsKey(s2charCode)){
             Integer s2count = s2Map.get(s2charCode);
             s2Map.put(s2charCode,s2count+1);
