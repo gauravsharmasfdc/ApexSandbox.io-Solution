@@ -11,9 +11,9 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         Integer mid = (start + last) / 2;
         if(target == opportunities[mid].amount) return mid;
         if(target > opportunities[mid].amount){
-            start = mid+1;
+            start = mid;
         }else {
-            last = mid-1;
+            last = mid;
         }
     }
         
