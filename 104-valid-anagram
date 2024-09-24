@@ -1,4 +1,5 @@
 public boolean isAnagram(String s1, String s2) {
+    if(String.isBlank(s1) || String.isBlank(s2)) return false;
     if(s1.length() != s2.length()) return false;
     Map<Integer,Integer> s1Map = new Map<Integer,Integer>();
     Map<Integer,Integer> s2Map = new Map<Integer,Integer>();
