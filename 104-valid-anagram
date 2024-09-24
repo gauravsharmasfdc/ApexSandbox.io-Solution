@@ -13,7 +13,6 @@ public boolean isAnagram(String s1, String s2) {
         } else
             s1Map.put(s1charCode,1);
 
-
         Integer s2charCode = s2.charAt(i);
         if(s2Map.containsKey(s2charCode)){
             Integer s2count = s2Map.get(s2charCode);
