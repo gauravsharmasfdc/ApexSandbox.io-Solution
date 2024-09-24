@@ -1,10 +1,29 @@
 public boolean isAnagram(String s1, String s2) {
     if(s1.length() != s2.length()) return false;
-
+    Map<Integer,Integer> s1Map = new Map<Integer,Integer>();
+    Map<Integer,Integer> s2Map = new Map<Integer,Integer>();
     Integer length = s1.length();
     for(Integer i=0; i< length; i++){
-        if(s2.indexOfChar(s1.charAt(i)) == -1) return false;
-        if(s2.indexOfChar(s1.charAt(i)) != s2.lastIndexOfChar(s1.charAt(i))) return false;
+        Integer s1charCode = s1.chatAt(i);
+        
+        if(s1Map.containsKey(s1charCode)){
+            Integer s1count = s1Map.get(s1charCode);
+            s1Map.put(s1charCode,s1count+1);
+        } else
+            s1Map.put(s1charCode,s1count);
+
+
+        Integer s2charCode = s2.chatAt(i);
+        if(s2Map.containsKey(s2charCode)){
+            Integer s2count = s2Map.get(s2charCode);
+            s2Map.put(s2charCode,s2count+1);
+        } else
+            s2Map.put(s2charCode,s2count);
+    }
+
+    for(Integer charCode : s1Map.keySet()){
+        if(!s2Map.containsKey(charCode)) return false;
+        if(s2Map.get(charCode) != s1Map.get(charCode)) return false;
     }
 
     return true;
