@@ -1,0 +1,17 @@
+public void plusOne(List<Integer> numbers) {
+    Integer last = numbers.size()-1;
+
+    while(last >= 0){
+        if(numbers[last] ! = 9){
+            numbers.set[last,numbers[last]+1];
+            return;
+        } else {
+            numbers.set[last,0];
+            if(last ==0){
+                List<Integer> newArr =new List<Integer>{1};
+                newArr.addAll(numbers);
+            }
+        }
+        
+    }
+}
