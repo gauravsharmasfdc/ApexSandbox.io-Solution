@@ -12,6 +12,6 @@ public void plusOne(List<Integer> numbers) {
                 newArr.addAll(numbers);
             }
         }
-        
+        last --;
     }
 }
