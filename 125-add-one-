@@ -10,6 +10,7 @@ public void plusOne(List<Integer> numbers) {
             if(last ==0){
                 List<Integer> newArr =new List<Integer>{1};
                     newArr.addAll(numbers);
+                    numbers = newArr;
             }
         }
         last --;
