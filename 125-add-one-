@@ -7,10 +7,9 @@ public void plusOne(List<Integer> numbers) {
             return;
         } else {
             numbers.set(last,0);
-            if(last ==0){
-                numbers.add(0,1);
-            }
         }
         last --;
     }
+
+     numbers.add(0, 1);
 }
