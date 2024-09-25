@@ -8,9 +8,7 @@ public void plusOne(List<Integer> numbers) {
         } else {
             numbers.set(last,0);
             if(last ==0){
-                List<Integer> newArr =new List<Integer>{1};
-                    newArr.addAll(numbers);
-                    numbers = newArr;
+                numbers.add(0,1);
             }
         }
         last --;
