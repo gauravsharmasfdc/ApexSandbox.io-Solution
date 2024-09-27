@@ -1,5 +1,5 @@
 public Boolean isSubSequence(String s1, String s2){
-    Integer startPointer = 0
+    Integer startPointer = 0;
     Integer s2StartPointer = -1;
     Integer length = s1.length();
     while(startPointer < length){
