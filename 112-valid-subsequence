@@ -1,0 +1,14 @@
+public Boolean isSubSequence(String s1, String s2){
+    Integer startPointer = 0
+    Integer s2StartPointer = -1;
+    Integer length = s1.length();
+    while(startPointer < length){
+        Integer charCode = s1.getCharAt(startPointer);
+        Integer index = s2.indexOfChar(charCode,startPointer)
+        if(index == -1) return false;
+        s2StartPointer = index+1;
+        startPointer++;
+    }
+
+    return true;
+}
