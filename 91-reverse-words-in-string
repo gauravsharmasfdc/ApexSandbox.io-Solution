@@ -5,13 +5,11 @@ public static String reverseWords(String str){
     for(Integer i=0; i< words.size(); i++){
         //words[i] = words[i].reverse();
         String word = words[i];
-        
-        Integer last = word.length()-1;
-
-        Integer start = 0;
+        Integer index = word.length()-1;
         list<Integer> wordCharArray = new List<Integer>();
         while(last >= 0){
             wordCharArray.add(word.charAt(last));
+            last--;
         }
         words[i] = String.fromCharArray(wordCharArray);
     }
