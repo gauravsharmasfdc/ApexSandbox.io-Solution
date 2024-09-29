@@ -1,6 +1,6 @@
 public static String reverseWords(String str){
     List<String> words = new list<String>();
-    if(String.isBlank(str)) return null;
+    if(String.isBlank(str)) return '';
     String newString;
     words = str.split(' ');
     for(Integer i=0; i< words.size(); i++){
