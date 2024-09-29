@@ -4,10 +4,9 @@ public static String reverseWords(String str){
     String newString;
     words = str.split(' ');
     for(Integer i=0; i< words.size(); i++){
-        String reStr = words[i].reverse();
-        newString = (newString != null) ? newString+= ' '+reStr : reStr;
+        words[i] = words[i].reverse();
     }
 
-    return newString;
+    return String.join(words,' ');
     
 }
