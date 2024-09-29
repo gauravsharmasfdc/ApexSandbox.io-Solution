@@ -11,7 +11,7 @@ public static String reverseWords(String str){
         Integer start = 0;
         list<Integer> wordCharArray = new List<Integer>();
         while(last >= 0){
-            wordCharArray.add(word.chatAt(last));
+            wordCharArray.add(word.charAt(last));
         }
         words[i] = String.fromCharArray(wordCharArray);
     }
