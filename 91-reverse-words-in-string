@@ -7,9 +7,9 @@ public static String reverseWords(String str){
         String word = words[i];
         Integer index = word.length()-1;
         list<Integer> wordCharArray = new List<Integer>();
-        while(last >= 0){
-            wordCharArray.add(word.charAt(last));
-            last--;
+        while(index >= 0){
+            wordCharArray.add(word.charAt(index));
+            index--;
         }
         words[i] = String.fromCharArray(wordCharArray);
     }
