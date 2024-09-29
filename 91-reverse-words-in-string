@@ -1,12 +1,9 @@
 public static String reverseWords(String str){
-    List<String> words = new list<String>();
     if(String.isBlank(str)) return '';
-    String newString;
+    List<String> words = new list<String>();
     words = str.split(' ');
     for(Integer i=0; i< words.size(); i++){
         words[i] = words[i].reverse();
     }
-
     return String.join(words,' ');
-    
 }
