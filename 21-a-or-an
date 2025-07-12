@@ -1,6 +1,6 @@
 public String aOrAn(String word) {
     Set<String> vowels = new Set<String>{'a','e','i','o','u'};
-    String firstLatter = String.fromCharArray(word.getChars()[0]);
+    String firstLatter = word.substring(0,1);
     if(vowels.contains(firstLatter))
         return 'An '+word;
     else
