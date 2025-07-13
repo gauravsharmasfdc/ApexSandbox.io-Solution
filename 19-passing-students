@@ -4,5 +4,5 @@ public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean p
     if(passedAssignments) counter++;
     if(passedProject) counter++;
 
-    return (counter==2);
+    return (counter>=2);
 }
