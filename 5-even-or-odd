@@ -1,4 +1,4 @@
 public String evenOrOdd(Integer num) {
     Integer reminder = Math.mod(num,2);
-    return reminder==0;
+    return reminder==0 ? 'even' : 'old';
 }
