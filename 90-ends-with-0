@@ -1,4 +1,4 @@
 public Boolean isEndWithZero(Integer num){
-     String stringValue = String.valueOf(num);
-     return (stringValue.endsWith('0'));
+    Integer reminder = Math.mod(num,2);
+    return reminder==0;
 }
