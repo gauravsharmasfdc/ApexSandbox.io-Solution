@@ -1,4 +1,4 @@
 public Boolean isEndWithZero(Integer num){
-    Integer reminder = Math.mod(num,5);
+    Integer reminder = Math.mod(num,10);
     return reminder==0;
 }
