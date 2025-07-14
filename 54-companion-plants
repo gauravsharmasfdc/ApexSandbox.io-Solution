@@ -1,5 +1,5 @@
 public Boolean companionPlants(String plant1, String plant2) {
-    private map<String, String> companions = new Map<String,String>();
+    map<String, String> companions = new Map<String,String>();
     companions.put('lettuce','cucumbers');
     companions.put('cucumbers','lettuce');
     companions.put('lettuce','onions');
