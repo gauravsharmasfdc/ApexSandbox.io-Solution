@@ -3,7 +3,7 @@ public String ageGroup(Integer n) {
         return 'Adult';
     if(n<= 21 && n>=15)
         return 'Youth';
-i   f(n<= 14 && n>=2)
+i   if(n<= 14 && n>=2)
         return 'Child'; 
     return 'Infant';
 }
