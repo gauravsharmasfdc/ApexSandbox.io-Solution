@@ -1,18 +1,15 @@
 public Integer rockPaperScissors(String player1, String player2) {
-    Map<String, String> whoBeatByWhom = new Map<String, String>{
-        'scissors' => 'rock',
-        'paper' => 'scissors',
-        'rock' => 'paper'
-    };
-
-    // Convert inputs to lowercase to handle case-insensitive comparisons
-    player1 = player1.toLowerCase();
-    player2 = player2.toLowerCase();
-
     if(player1 == player2)
         return 0;
-    else if(whoBeatByWhom.get(player1) == player2)
-        return 2;
-    else
+
+    if(player1 == 'rock' && player2 == 'scissors')
         return 1;
+    if(player1 == 'scissors' && player2 == 'paper')
+        return 1;
+    if(player1 == 'paper' && player2 == 'rock')
+        return 1;
+    
+    return 2;
+    
+    
 }
