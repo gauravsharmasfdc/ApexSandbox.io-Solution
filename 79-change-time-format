@@ -13,9 +13,9 @@ public String changeTimeFormat(String strTime) {
     }
 
     hours = String.valueOf(hoursInt);
-
+    hours = hours.leftPad(2,0);
     
-    return  hours.leftPad(2,0) +':'+ minutes+' '+ampm;
+    return  hours +':'+ minutes+' '+ampm;
 
         
 }
