@@ -12,10 +12,10 @@ public String changeTimeFormat(String strTime) {
         hoursInt= hoursInt- 12;
     }
 
-    hours = hoursInt.leftPad(2,0);
+    hours = String.valueOf(hoursInt);
 
     
-    return  hours +':'+ minutes+' '+ampm;
+    return  hours.leftPad(2,0) +':'+ minutes+' '+ampm;
 
         
 }
