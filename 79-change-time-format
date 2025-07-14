@@ -7,7 +7,7 @@ public String changeTimeFormat(String strTime) {
         return String.valueOf(hoursInt) +':'+ minutes+' PM';
     }
     if(hoursInt > 12){
-        hoursInt- 12;
+        hoursInt= hoursInt- 12;
         return String.valueOf(hoursInt) +':'+ minutes+' PM';
     }
     
