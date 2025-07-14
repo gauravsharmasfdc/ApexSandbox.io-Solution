@@ -2,7 +2,7 @@ public String changeTimeFormat(String strTime) {
     string hours = strTime.subStringBefore(':');
     String minutes = strTime.subStringAfter(':');
     Integer hoursInt = Integer.valueOf(hours);
-    String ampm = hours < 12 ? 'AM' : 'PM';
+    String ampm = hoursInt < 12 ? 'AM' : 'PM';
     
     if(hoursInt == 0){
         hours = '12';
