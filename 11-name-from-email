@@ -3,6 +3,6 @@ public String nameFromEmail(String email) {
     String firstName = fullNameExt.substringBefore('.');
     String lastName = fullNameExt.substringAfter('.');
 
-    return firstName.toUpperCase()+' '+lastName.toUpperCase();
-
+    String fullName =  firstName+' '+lastName;
+    return fullName.capitalize();
 }
