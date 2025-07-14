@@ -2,25 +2,18 @@ public String changeTimeFormat(String strTime) {
     string hours = strTime.subStringBefore(':');
     String minutes = strTime.subStringAfter(':');
     Integer hoursInt = Integer.valueOf(hours);
-    String ampm;
-    if(hoursInt < 12){
-        ampm= 'AM';
-    }
-    if(hoursInt >= 12){
-        ampm = 'PM';
-    }
-    if(hoursInt > 12){
-        hoursInt= hoursInt- 12;
-        
-    }
-    if(hoursInt < 10){
-            hours = '0'+String.valueOf(hoursInt);
-        }else {
-            hours = String.valueOf(hoursInt);
-        }
+    String ampm = hours < 12 ? 'AM' : 'PM';
+    
     if(hoursInt == 0){
         hours = '12';
     }
+
+    if(hoursInt > 12){
+        hoursInt= hoursInt- 12;
+    }
+
+    hours = hoursInt.leftPad(2,0);
+
     
     return  hours +':'+ minutes+' '+ampm;
 
