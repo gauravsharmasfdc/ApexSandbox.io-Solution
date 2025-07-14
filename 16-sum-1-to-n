@@ -1,6 +1,5 @@
 public Integer sumToN(Integer n) {
-    Integer sum =0;
-    if(n != 0)
-        sum = sumToN(n-1);
-    return n + sum;
+    if(n == 0)
+        return 0;
+    return n + sumToN(n-1);
 }
