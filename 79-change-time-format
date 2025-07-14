@@ -18,6 +18,9 @@ public String changeTimeFormat(String strTime) {
         }else {
             hours = String.valueOf(hoursInt);
         }
+    if(hoursInt == 0){
+        hours = '00';
+    }
     
     return  hours +':'+ minutes+' '+ampm;
 
