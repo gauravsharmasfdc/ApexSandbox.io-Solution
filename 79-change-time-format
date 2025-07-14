@@ -18,7 +18,7 @@ public String changeTimeFormat(String strTime) {
         }
     }
     
-    return  hours +':'+ minutes+' AM';
+    return  hours +':'+ minutes+' '+ampm;
 
         
 }
