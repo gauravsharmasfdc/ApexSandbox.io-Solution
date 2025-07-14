@@ -1,7 +1,6 @@
 public String nameFromEmail(String email) {
-    String fullNameExt = email.substringBefore('@');
-    String firstName = fullNameExt.substringBefore('.');
-    String lastName = fullNameExt.substringAfter('.');
+    String firstName = email.substringBefore('@').substringBefore('.');
+    String lastName = email.substringBefore('@').substringAfter('.');
 
     return firstName.toLowerCase().capitalize()+' '+lastName.toLowerCase().capitalize();
 }
