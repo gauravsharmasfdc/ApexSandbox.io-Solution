@@ -5,5 +5,5 @@ public String reverseWordsInASentence(String sentence){
         sentence+=words[i]+' ';
 
     }
-    return sentence;
+    return sentence.trim();
 }
