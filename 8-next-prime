@@ -21,7 +21,7 @@ public Integer nextPrime(Integer num) {
         }
         Integer sqrtN = Math.floor(Math.sqrt(n)).intValue();
         for (Integer i = 3; i <= sqrtN; i += 2) {
-            if (Math.mod(n , i == 0) {
+            if (Math.mod(n , i) == 0) {
                 return false;
             }
         }
