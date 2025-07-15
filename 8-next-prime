@@ -4,10 +4,10 @@ public Integer nextPrime(Integer num) {
         for(Integer i= 2; i< num-1; i++){
             if(Math.mod(num,i)!=0){
                 isPrimeNotFound = false;
-                return num;
             }
         }
         num++;
     }
+    return num;
     
 }
