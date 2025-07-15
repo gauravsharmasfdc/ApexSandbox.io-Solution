@@ -1,11 +1,14 @@
 public Integer fibonacci(Integer n) {
-    Integer prevFib = 1;
-    Integer currentFib = 1;
+    Integer secondLastFib = 1;
+    Integer lastFib = 1;
+    Integer currentFib = 1 ;
     if(n ==1 || n == 2)
         return 1;
     for(Integer i = 3 ; i<= n; i++){
-        prevFib = currentFib;
-        currentFib = prevFib+ currentFib;
+        currentFib = lastFib+ secondLastFib;
+        secondLastFib = lastFib;
+        lastFib = currentFib;
     }
     return currentFib;
 }
+    
