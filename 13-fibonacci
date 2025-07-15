@@ -1,16 +1,11 @@
 public Integer fibonacci(Integer n) {
-
-
-    if (n==1 || n==2) return 1;
-    
-    Integer a = 1;
-    Integer b = 1;
-    Integer fib = 1;
-    for(Integer i =3; i<= n; i++){
-        fib = a + b;
-        a = b; 
-        b = fib;
+    Integer prevFib = 1;
+    Integer currentFib = 1;
+    if(n ==1 || n == 2)
+        return 1;
+    for(Integer i = 3 ; i<= n; i++){
+        prevFib = currentFib;
+        currentFib = prevFib+ currentFib;
     }
-    
-    return fib;
+    return currentFib;
 }
