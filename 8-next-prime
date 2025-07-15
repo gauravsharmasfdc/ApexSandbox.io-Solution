@@ -1,28 +1,7 @@
 public Integer nextPrime(Integer num) {
-        Integer primeNum = num + 1;
-        Boolean primeFound = false;
-
-        while (!primeFound) {
-            if (primeNum <= 1) {
-                primeFound = false;
-            } else if (primeNum == 2) {
-                primeFound = true;
-            } else if (Math.mod(primeNum,2) == 0) {
-                primeFound = false;
-            } else {
-                primeFound = true;
-                for (Integer i = 3; i <= Math.sqrt(primeNum); i += 2) {
-                    if (Math.mod(primeNum,i) == 0) {
-                        primeFound = false;
-                        break;
-                    }
-                }
-            }
-
-            if (!primeFound) {
-                primeNum++; 
-            }
-        }
-
-        return primeNum;
+    for(Integer i= 2;i<num-1;i++){
+        if(Math.mod(num,i)==0)
+            return false;
+    }
+    return true;
 }
